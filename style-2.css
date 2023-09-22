@@ -46,9 +46,11 @@ body {
   background-color: blue; /* not needed */ 
 }
 
+/* Below we have absolute position divs (that have been placed inside the white border divs), meaning that they will stay inside them! We will also have absolute position divs inside absolute positon divs!
+*/
+
 .redLight {
-  /* <!-- absolute position div inside a relative position div!*/ 
-  position: absolute; /* stays inside its assigned location... in this case its white-border-container... */
+  position: absolute; 
   top: 0;
   bottom: 0; 
   right: 0;
@@ -68,7 +70,7 @@ body {
 }
 
 .yellowLight {
-  position: absolute;
+  position: absolute; /* inside white-border-container-middle */
   top: 0;
   bottom: 0; 
   right: 0;
@@ -87,8 +89,8 @@ body {
   left: 50%;
 }
 
-.greenLight {
-  position: absolute;
+.greenLight { 
+  position: absolute; /* inside white-border-container */
   top: 0;
   bottom: 0; 
   right: 0;
