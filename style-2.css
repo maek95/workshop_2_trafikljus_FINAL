@@ -1,0 +1,108 @@
+/* html, body {
+  height: 100%; 
+}  *//* center Horizontally, can remove the margins in 'container', but then we can't scroll...*/
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  /* these two lines below COMBINED with the html attributes above
+  CENTERS ALL CONTENT ON THE PAGE (horizontally). */
+  display: table-cell;
+  vertical-align: middle;
+
+  margin: 0;
+  padding: 0;
+  background-color: rgb(184, 184, 184);
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  background-color: black; /* not needed */
+}
+
+.white-border-container {
+  height: 200px; 
+  width: 200px;
+
+  position: relative; /* relative to  its parent (container?)... Can place absolute position divs inside this! */
+  border: 10px solid white;
+  box-sizing: border-box; /* width and height accounts border */
+}
+
+.white-border-container-middle {
+  height: 180px; /* 200px - 20px since we have no top/bottom borders here. */
+  width: 200px;
+
+  position: relative; 
+  border: 10px solid white;
+  border-top: 0;
+  border-bottom: 0;
+  box-sizing: border-box; 
+  background-color: blue; /* not needed */ 
+}
+
+.redLight {
+  /* <!-- absolute position div inside a relative position div!*/ 
+  position: absolute; /* stays inside its assigned location... in this case its white-border-container... */
+  top: 0;
+  bottom: 0; 
+  right: 0;
+  left: 0; /* div stretches from top to bottom, and left to right, of white-border-container*/
+
+  background-color: red;
+  border: 15px solid rgb(153, 0, 0);
+}
+
+.redLight_2 {
+  position: absolute; /* inside redLight */
+  background-color: rgb(255, 134, 134);
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.yellowLight {
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  right: 0;
+  left: 0; 
+
+  background-color: yellow;
+  border: 15px solid rgb(201, 137, 0);
+}
+
+.yellowLight_2 {
+  position: absolute; /* inside yellowLight */
+  background-color: #fafab8;
+  top: 50%;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+}
+
+.greenLight {
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  right: 0;
+  left: 0; 
+
+  background-color: green;
+  border: 15px solid rgb(0, 88, 0);
+}
+
+.greenLight_2 {
+  position: absolute; /* inside greenLight */
+  background-color: rgb(134, 175, 134);
+  top: 50%;
+  bottom: 0;
+  right: 50%;
+  left: 0;
+}
