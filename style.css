@@ -1,0 +1,83 @@
+/* html, body {
+  height: 100%; 
+}  *//* center Horizontally, can remove the margins in 'container',but then we can't scroll.*/
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  /* these two lines below COMBINED with the html attributes above
+  CENTERS ALL CONTENT ON THE PAGE (horizontally). */
+  display: table-cell;
+  vertical-align: middle;
+
+  margin: 0;
+  padding: 0;
+  background-color: rgb(184, 184, 184);
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* center horizontally */ 
+  display: inline-block;
+
+  background-color: black;
+}
+
+.white-border-container {
+  height: 200px; 
+  width: 200px;
+
+  position: relative; /* does not follow when you scroll... */
+  border: 10px solid white;
+  box-sizing: border-box; /* width and height accounts border */
+}
+
+.white-border-container-middle {
+  height: 180px; /* 200px - 20px since we have no top/bottom borders here. */
+  width: 200px;
+
+  position: relative; 
+  border: 10px solid white;
+  border-top: 0;
+  border-bottom: 0;
+  box-sizing: border-box; 
+  background-color: blue;
+}
+
+.redLight {
+  /* <!-- absolute position div inside a relative position div!*/ 
+  position: absolute; /* stays inside its assigned location... in this case its white-border-container... */
+  top: 0;
+  bottom: 0; 
+  right: 0;
+  left: 0; /* div stretches from top to bottom, and left to right */
+
+  background-color: red;
+  border: 15px solid rgb(153, 0, 0);
+}
+
+.yellowLight {
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  right: 0;
+  left: 0; 
+
+  background-color: yellow;
+  border: 15px solid rgb(201, 137, 0);
+}
+
+.greenLight {
+  position: absolute;
+  top: 0;
+  bottom: 0; 
+  right: 0;
+  left: 0; 
+
+  background-color: green;
+  border: 15px solid rgb(0, 88, 0);
+}
